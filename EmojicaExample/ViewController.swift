@@ -37,6 +37,9 @@ class ViewController: UIViewController {
 extension ViewController : UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         emojica.textViewDidChange(textView)
+        print("text count \(textView.text.count)")
+        print("attributedText count \(textView.attributedText.length)")
+        print("emojicaText count \(textView.emojicaText.length)")
     }
 }
 
