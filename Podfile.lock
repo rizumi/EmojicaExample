@@ -1,0 +1,16 @@
+PODS:
+  - Emojica (0.9.4)
+
+DEPENDENCIES:
+  - Emojica
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Emojica
+
+SPEC CHECKSUMS:
+  Emojica: 5cc40a9dd30fa56593ddb755b2eb9c789803c0bc
+
+PODFILE CHECKSUM: 7332121a3720015b7ea32294e9c44892790cf57b
+
+COCOAPODS: 1.5.3
