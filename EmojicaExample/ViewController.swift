@@ -11,13 +11,16 @@ import Emojica
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textField: UITextField!
     let emojica = Emojica()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let sample: String = "Sample text 😎 👨‍👨‍👦"
+        label.attributedText = emojica.convert(string: sample)
         
         textView.delegate = self
         textField.delegate = self
@@ -48,6 +51,8 @@ extension ViewController : UITextViewDelegate {
 extension ViewController : UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
+        // UITextFieldの場合attributedTextに画像表示できない
+        // attributedPlaceholderであれば使えるがどうしてもやりたい場合のみの方が良さそう
         // textField.attributedText = emojica.convert(string: textField.text!)
 
         return true

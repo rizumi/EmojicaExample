@@ -18,32 +18,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TextField" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B82-HI-Dub">
-                                <rect key="frame" x="20" y="120" width="335" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B82-HI-Dub">
+                                <rect key="frame" x="20" y="111" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1p9-2Y-mNC">
-                                <rect key="frame" x="20" y="170" width="335" height="97"/>
+                                <rect key="frame" x="20" y="161" width="335" height="106"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4R7-sQ-FQh">
+                                <rect key="frame" x="20" y="70" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1p9-2Y-mNC" secondAttribute="bottom" constant="400" id="1Fr-dR-vAn"/>
+                            <constraint firstItem="4R7-sQ-FQh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7ul-Gj-HZF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4R7-sQ-FQh" secondAttribute="trailing" constant="20" id="Dam-d3-2Us"/>
                             <constraint firstItem="B82-HI-Dub" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IvV-l0-rY6"/>
+                            <constraint firstItem="4R7-sQ-FQh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="MbK-5W-Zet"/>
                             <constraint firstItem="1p9-2Y-mNC" firstAttribute="top" secondItem="B82-HI-Dub" secondAttribute="bottom" constant="20" id="Nfb-rd-zGK"/>
-                            <constraint firstItem="B82-HI-Dub" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="NvI-uP-Vr3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1p9-2Y-mNC" secondAttribute="trailing" constant="20" id="OtS-FD-UrI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B82-HI-Dub" secondAttribute="trailing" constant="20" id="Pgh-01-Rqg"/>
+                            <constraint firstItem="B82-HI-Dub" firstAttribute="top" secondItem="4R7-sQ-FQh" secondAttribute="bottom" constant="20" id="XTr-yV-1hZ"/>
                             <constraint firstItem="1p9-2Y-mNC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oOU-R5-2Yc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="label" destination="4R7-sQ-FQh" id="qcN-TM-UDn"/>
                         <outlet property="textField" destination="B82-HI-Dub" id="ILj-W8-FnZ"/>
                         <outlet property="textView" destination="1p9-2Y-mNC" id="1DP-An-DvZ"/>
                     </connections>
